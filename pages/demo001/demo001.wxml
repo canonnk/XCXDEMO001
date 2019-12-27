@@ -1,0 +1,6 @@
+<view>
+    <button class="btn" type="primary" bindtap="submitRequest">发起请求</button>
+    <button class="btn" type="primary" bindtap="readLocalData">读取本地数据</button>
+    <button class="btn" type="primary" bindtap="clearLocalData">清除本地数据</button>
+    <button class="btn" type="primary" bindtap="jumt">跳转({{returnData}})</button>
+</view>

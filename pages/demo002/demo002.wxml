@@ -1,0 +1,4 @@
+<view>
+  <input type="text" bindinput="bindKeyInput" />
+  <button class="btn" type="primary" bindtap="returnToParent">返回</button>
+</view>
