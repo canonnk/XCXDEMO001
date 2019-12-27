@@ -1,6 +1,7 @@
-<view>
-    <button class="btn" type="primary" bindtap="submitRequest">发起请求</button>
+<view class="">
+    <button class="btn" type="primary" style="width:100%" bindtap="submitRequest">发起请求</button>
     <button class="btn" type="primary" bindtap="readLocalData">读取本地数据</button>
     <button class="btn" type="primary" bindtap="clearLocalData">清除本地数据</button>
     <button class="btn" type="primary" bindtap="jumt">跳转({{returnData}})</button>
+    <button class="btn" type="primary" bindtap="permiseDemo">Permise封装</button>
 </view>

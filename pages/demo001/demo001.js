@@ -1,3 +1,7 @@
+var util = require('../../utils/util')
+
+var getLocationPromisified = util.wxPromisify(wx.getStorage)
+
 // pages/demo001/demo001.js
 Page({
 
@@ -77,15 +81,10 @@ Page({
         Password:'abc.123'
       },
       success (res) {
-        let x = [];
-        for(let i = 0; i <= 100000; ++i) {
-          x.push(res.data);
-        }
         wx.setStorage({
           key:'userinfo',
-          data:x
+          data:res.data
         })
-        console.log(res.data)
       }
     })
     console.log('submitRequest end')
@@ -142,5 +141,15 @@ Page({
       fail: ()=>{},
       complete: ()=>{}
     });
+  }
+
+  ,permiseDemo( ) {
+    getLocationPromisified({
+      key: 'userinfo'
+    }).then(value => {
+      console.log(value.data)
+    }).catch(function () {
+      console.error("get location failed")
+    })
   }
 })
